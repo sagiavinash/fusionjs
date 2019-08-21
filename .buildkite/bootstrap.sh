@@ -27,12 +27,11 @@ for DIR in $CHANGES ; do (
     else
       echo "  - label: '$PROJECT'";
       echo "    commands:";
-      echo "    - 'cd $DIR'";
-      echo "    - 'jazelle ci'";
-      echo "    - 'jazelle build'";
-      echo "    - 'jazelle test'";
-      echo "    - 'jazelle lint'";
-      echo "    - 'jazelle flow'";
+      echo "    - 'jazelle ci --cwd=$DIR'";
+      echo "    - 'jazelle build --cwd=$DIR'";
+      echo "    - 'jazelle test --cwd=$DIR'";
+      echo "    - 'jazelle lint --cwd=$DIR'";
+      echo "    - 'jazelle flow --cwd=$DIR'";
       echo "    timeout_in_minutes: 10";
       echo "    plugins:";
       echo "      'docker-compose#v3.0.0':";
